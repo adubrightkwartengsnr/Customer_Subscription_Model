@@ -4,6 +4,14 @@ import pandas as pd
 from pydantic import BaseModel
 import joblib
 import uvicorn
+import numpy as np
+import __main__
+
+def safe_log1p(X):
+    X = np.where(X <= 0, 1e-9, X)
+    return np.log1p(X)
+
+__main__.safe_log1p = safe_log1p
 
 
 
@@ -37,11 +45,26 @@ def get_status():
 
 # # Create CustomerSubscriptionFeatures class from pydantic BaseModel
 class CustomerSubscriptionFeatures(BaseModel):
-    
+        age: int
+        job: str            
+        marital: str         
+        education: str       
+        default: str         
+        balance: int      
+        housing: str         
+        loan: str           
+        contact: str         
+        day: int            
+        month: str          
+        duration: int     
+        campaign: int       
+        pdays: int         
+        previous: int      
+        poutcome:str  
 
 # # Create Endpoint for the XGB Classifier Pipeline
 @app.post("/predict_sepsis/xgb_classifier")
-async def predict_sepsis(data:SepssisFeatures):
+async def predict_sepsis(data:CustomerSubscriptionFeatures):
     try:
         # create dataframe from sepssis data
         df = pd.DataFrame([data.model_dump()])
@@ -56,8 +79,8 @@ async def predict_sepsis(data:SepssisFeatures):
         response = {"model_used":"XGB Classifier",
                     "prediction": decoded_prediction,
                     "prediction_probability":
-                    {"Negative":round(prediction_proba[0],2),
-                     "Positive":round(prediction_proba[1],2)}
+                    {"No":round(prediction_proba[0],2),
+                     "Yes":round(prediction_proba[1],2)}
                     }
         
         return response
@@ -66,7 +89,7 @@ async def predict_sepsis(data:SepssisFeatures):
 
 # # Create Endpoint for the Gradient Boost Model
 @app.post("/predict_sepsis/gradient_boost")
-async def predict_sepsis(data:SepssisFeatures):
+async def predict_sepsis(data:CustomerSubscriptionFeatures):
     try:
         # create dataframe from sepssis data
         df = pd.DataFrame([data.model_dump()])
@@ -82,8 +105,8 @@ async def predict_sepsis(data:SepssisFeatures):
         response =  {"model_used":"Gradient Boosting Classifier",
                     "prediction": decoded_prediction,
                     "prediction_probability":
-                    {"Negative":round(prediction_proba[0],2),
-                     "Positive":round(prediction_proba[1],2)}
+                    {"No":round(prediction_proba[0],2),
+                     "Yes":round(prediction_proba[1],2)}
                     }
         
         return response
@@ -92,4 +115,4 @@ async def predict_sepsis(data:SepssisFeatures):
     
 
 if __name__ == "__main__":
-    uvicorn.run("api.py",reload=True)
+    uvicorn.run("api:app",reload=True)
