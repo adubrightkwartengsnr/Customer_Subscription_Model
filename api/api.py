@@ -1,4 +1,5 @@
 
+import os
 from fastapi import FastAPI
 import pandas as pd
 from pydantic import BaseModel
@@ -28,11 +29,12 @@ app = FastAPI(
 )
 
 
-# load model components
 def load_ml_components():
-    with open("./models/model_components.joblib","rb") as file:
-        model_components = joblib.load(file) 
+    model_path = os.path.join(os.path.dirname(__file__), "models", "model_components.joblib")
+    with open(model_path, "rb") as file:
+        model_components = joblib.load(file)
     return model_components
+
 
 # call the model components
 model_components = load_ml_components()
@@ -115,4 +117,4 @@ async def predict_sepsis(data:CustomerSubscriptionFeatures):
     
 
 if __name__ == "__main__":
-    uvicorn.run("api:app",reload=True)
+    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
