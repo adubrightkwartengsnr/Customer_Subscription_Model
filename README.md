@@ -109,8 +109,9 @@ A snapshot of the conducted exploratory data analysis, aimed at addressing pivot
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
-|  ![campaigns by subscription](https://github.com/adubrightkwartengsnr/Customer_Subscription_Model/blob/dev/eda%20assets/Screenshot%202024-12-09%20123157.png) | ![subscriptions by month](https://github.com/adubrightkwartengsnr/Customer_Subscription_Model/blob/dev/eda%20assets/Screenshot%202024-12-09%20123308.png)
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|  ![campaigns by subscription](https://github.com/adubrightkwartengsnr/Customer_Subscription_Model/blob/dev/eda%20assets/Screenshot%202024-12-09%20123157.png) | ![subscriptions by month](https://github.com/adubrightkwartengsnr/Customer_Subscription_Model/blob/dev/eda%20assets/Screenshot%202024-12-09%20123308.png) | 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ![campaign trend vs subcription rate](https://github.com/adubrightkwartengsnr/Customer_Subscription_Model/blob/dev/eda%20assets/Screenshot%202024-12-09%20123324.png) | ![target class distribution](https://github.com/adubrightkwartengsnr/Customer_Subscription_Model/blob/dev/eda%20assets/Screenshot%202024-12-09%20124651.png) |
 
 ## Model Selection
@@ -126,9 +127,9 @@ Therefore, for this specific prediction task, we are adopting the XGBClassifier 
 
 ## Recommendations
 
-1. **Promotion Optimization:** Based on the analysis of the impact of promotions on sales, consider optimizing promotion strategies. Identify which types of promotions (e.g., discounts, BOGO offers) have the most significant influence on sales and tailor promotional campaigns accordingly. By focusing promotional efforts on what truly drives sales, you can maximize the return on investment.
+1. **Campaign Optimization:** Based on the analysis of the impact of number of campaigns on subscription, the marketing team should tailor promotional campaigns accordingly. I think they should limit the number of campaigns per person.
 
-2. **Focus on High-Performing Cities**: The top-performing city, "Quito," stands out with the highest sales. It's essential to allocate additional resources and marketing efforts to maintain and potentially increase sales in Quito. Additionally, cities like "Guayaquil," "Cuenca," "Ambato," and "Santo Domingo" have also shown strong sales performance. Consider developing city-specific strategies to capitalize on these markets.
+2. **Focus on customers that previously subscribed to a term**: The customers with an outcome, "Success," in the previous campaings stands out with the highest chance of subscribing to the latest promotions. It's essential to allocate additional resources and marketing efforts to maintain and potentially improve success rate for these customers. Additionally, cellular contacts made to customers yielded a lot of positive outcomes.We should Consider improving customer-contact strategies to capitalize on these markets.
 
 3. **Cluster-Centric Approach**: The analysis reveals that certain clusters, such as "Cluster 14," "Cluster 6," and "Cluster 8," exhibit remarkable sales figures. Invest in understanding the unique characteristics of these clusters and tailor product assortments, promotions, and inventory management strategies to maximize sales potential in these areas.
 
