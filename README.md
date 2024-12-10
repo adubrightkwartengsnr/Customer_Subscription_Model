@@ -105,18 +105,23 @@ There is a statistically significant positive relationship (359.492) between the
 
 A snapshot of the conducted exploratory data analysis, aimed at addressing pivotal business inquiries during the analysis process.
 
-| ![storesbytype](https://github.com/snyamson/LP3-Super-Store-Time-Series-Forecasting/assets/58486437/dae0298b-2477-4772-a650-31a74b839266)         | ![storesbystate](https://github.com/snyamson/LP3-Super-Store-Time-Series-Forecasting/assets/58486437/549cf603-45e6-43a6-9304-760c36c5f324)       |
+| ![data distribution](https://github.com/adubrightkwartengsnr/Customer_Subscription_Model/blob/dev/eda%20assets/Screenshot%202024-12-09%20122847.png)         | ![outlier distribution](https://github.com/adubrightkwartengsnr/Customer_Subscription_Model/blob/dev/eda%20assets/Screenshot%202024-12-09%20122925.png) |
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+
+|  ![campaigns by subscription](https://github.com/adubrightkwartengsnr/Customer_Subscription_Model/blob/dev/eda%20assets/Screenshot%202024-12-09%20123157.png) | ![subscriptions by month](https://github.com/adubrightkwartengsnr/Customer_Subscription_Model/blob/dev/eda%20assets/Screenshot%202024-12-09%20123308.png)
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![oil trend](https://github.com/snyamson/LP3-Super-Store-Time-Series-Forecasting/assets/58486437/468f4fe4-84d4-4e7a-a58a-d85739646a49) | ![newplot](https://github.com/snyamson/LP3-Super-Store-Time-Series-Forecasting/assets/58486437/79b272b7-319c-48de-901c-467ca57b9a78) |
+| ![campaign trend vs subcription rate](https://github.com/adubrightkwartengsnr/Customer_Subscription_Model/blob/dev/eda%20assets/Screenshot%202024-12-09%20123324.png) | ![target class distribution](https://github.com/adubrightkwartengsnr/Customer_Subscription_Model/blob/dev/eda%20assets/Screenshot%202024-12-09%20124651.png) |
 
 ## Model Selection
 
 
-![Model](https://github.com/Makafui-Kwawu/Time-Series-Regression-Analysis-Corporation_Favorita/assets/160020850/02e79d25-7683-4e5f-86c1-4ade6ea44ae4)
+| ![Model](https://github.com/adubrightkwartengsnr/Customer_Subscription_Model/blob/dev/eda%20assets/Screenshot%202024-12-09%20130211.png) |
+![Feature-importance](https://github.com/adubrightkwartengsnr/Customer_Subscription_Model/blob/dev/eda%20assets/Screenshot%202024-12-09%20212059.png)
 
-After carefully assessing the performance of our models using key evaluation metrics, it is evident that the XGBoost model stands out as the most effective choice for our dataset. The RMSLE (Root Mean Squared Logarithmic Error) serves as a crucial indicator, and the XGBoost model achieved the lowest RMSLE of 0.007 among all models evaluated. This indicates that the XGBoost model provides the most accurate and precise predictions when compared to ARIMA, SARIMA, and Linear Regression models.
+After carefully assessing the performance of our models using key evaluation metrics, it is evident that the XGBClassifier and Gradient Boosting models stand out as the most effective choices for our dataset. The F1-score serves as a crucial indicator, and the models achieved the highest F1-score of 0.9 among all models evaluated. This indicates that the XGBClassifier and the Gradient Boosting models provide the most accurate and precise predictions when compared to RandomForest, and Logistic Regression models.
 
-Therefore, for this specific forecasting task, we are adopting the XGBoost model for its superior predictive accuracy.
+Therefore, for this specific prediction task, we are adopting the XGBClassifier and Gradient Boosting models for its superior predictive accuracy.
 
 
 ## Recommendations
@@ -131,10 +136,66 @@ Therefore, for this specific forecasting task, we are adopting the XGBoost model
 
 ## Getting Started🏁
 
-1. Clone this repository: `[git clone https://github.com/Makafui-Kwawu/Time-Series-Regression-Analysis-Corporation_Favorita.git]`
-2. Navigate to the project directory: `LP3-Super-Store-Time-Series-Forecasting`
-3. Explore the Jupyter notebooks for detailed steps and code execution.
-4. Read the published article for a comprehensive understanding of the project.
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+
+- Python
+
+
+### Setup
+
+Clone this repository to your desired folder:
+
+
+```sh
+  cd my-folder
+  git clone https://github.com/adubrightkwartengsnr/Customer_Subscription_Model
+```
+
+Change into the cloned repository
+
+```sh
+  cd Customer_Subscription_Model
+  
+```
+
+Create a virtual environment
+
+```sh
+
+python -m venv env
+
+```
+
+Activate the virtual environment
+
+```sh
+    env/Scripts/activate
+```
+
+
+### Install
+
+Here, you need to recursively install the packages in the `requirements.txt` file using the command below 
+
+```sh
+   pip install -r requirements.txt
+```
+
+### Prerequisites
+
+In order to run this project, you need:
+
+- Python installed on your machine
 
 ## License📜
 
@@ -142,9 +203,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Author✍️
 
-Success Makafui Kwawu
+Bright Kwarteng Senior Adu
 
-Connect with me on LinkedIn: [LinkedIn Profile](https://linkedin.com/in/smkwawu/)
+Connect with me on LinkedIn: [LinkedIn Profile](https://linkedin.com/in/bright-adu-kwarteng-snr)
 
 ---
 
