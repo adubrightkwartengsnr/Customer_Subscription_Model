@@ -131,9 +131,9 @@ Therefore, for this specific prediction task, we are adopting the XGBClassifier 
 
 2. **Focus on customers that previously subscribed to a term**: The customers with an outcome, "Success," in the previous campaings stands out with the highest chance of subscribing to the latest promotions. It's essential to allocate additional resources and marketing efforts to maintain and potentially improve success rate for these customers. Additionally, cellular contacts made to customers yielded a lot of positive outcomes.We should Consider improving customer-contact strategies to capitalize on these markets.
 
-3. **Cluster-Centric Approach**: The analysis reveals that certain clusters, such as "Cluster 14," "Cluster 6," and "Cluster 8," exhibit remarkable sales figures. Invest in understanding the unique characteristics of these clusters and tailor product assortments, promotions, and inventory management strategies to maximize sales potential in these areas.
+3. **Incentive Programs**: The bank should offer incentives for first-time subscribers or loyalty programs for returning customers, such as discounts on deposit rates, rewards points, or exclusive offers.
 
-4. **Cross-Analysis Opportunities**: Explore opportunities to combine the strengths of high-performing cities, clusters, store types, and states. For example, consider aligning promotions with holidays and events in top cities and clusters to maximize sales impact. Additionally, assess whether specific store types thrive in particular cities or clusters, and use this information to refine expansion plans.
+4. **Data-driven timing optimizayion**: Februray to March,August-September and November-December yield better responses based on data (e.g., targeting clients in high-conversion months).The marketing team should conduct campaigns during these optimal periods to maximize engagement and minimize wasted effort.
 
 ## Getting Started🏁
 
