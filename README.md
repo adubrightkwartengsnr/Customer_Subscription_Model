@@ -67,7 +67,7 @@ Specifically, we are to build a model that more accurately predicts the subscrit
 - Mined invaluable insights from extensive exploratory data analysis, unveiling hidden trends and patterns within the dataset.
 - Engineered advanced predictive models, featuring the formidable XGBoost algorithm, to forecast sales with unprecedented accuracy.
 - Implemented rigorous hyperparameter tuning, unlocking the full potential of our models and achieving unparalleled predictive performance.
-- Crafted a compelling and informative README file, sharing the project's compelling journey, groundbreaking results, and its potential to reshape the future of retail forecasting.
+- Crafted a compelling and informative README file, sharing the project's compelling journey, groundbreaking results, and its potential to reshape the future of bank deposit-term subscription.
 
 ## Summary
 
