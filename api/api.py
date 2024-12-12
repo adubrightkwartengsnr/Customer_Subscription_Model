@@ -8,13 +8,13 @@ import uvicorn
 import numpy as np
 import __main__
 
+import __main__
+
 def safe_log1p(X):
     X = np.where(X <= 0, 1e-9, X)
     return np.log1p(X)
 
 __main__.safe_log1p = safe_log1p
-
-
 
 
 # create an instance of FASTAPI
