@@ -65,12 +65,12 @@ class CustomerSubscriptionFeatures(BaseModel):
         poutcome:str  
 
 # # Create Endpoint for the XGB Classifier Pipeline
-@app.post("/predict_sepsis/xgb_classifier")
-async def predict_sepsis(data:CustomerSubscriptionFeatures):
+@app.post("/predict_subscription/xgb_classifier")
+async def subcription_prediction(data:CustomerSubscriptionFeatures):
     try:
         # create dataframe from sepssis data
         df = pd.DataFrame([data.model_dump()])
-        # call the random_forest_pipeline and encoder from the ml model
+        # call the xgb_classifier_pipeline and encoder from the ml model
         xgb_classifier_pipeline = model_components["xgb_classifier"]
         encoder = model_components["encoder"]
         # make prediction
@@ -90,8 +90,8 @@ async def predict_sepsis(data:CustomerSubscriptionFeatures):
         return {"error": str(e)}
 
 # # Create Endpoint for the Gradient Boost Model
-@app.post("/predict_sepsis/gradient_boost")
-async def predict_sepsis(data:CustomerSubscriptionFeatures):
+@app.post("/predict_subscription/gradient_boost")
+async def subcription_prediction(data:CustomerSubscriptionFeatures):
     try:
         # create dataframe from sepssis data
         df = pd.DataFrame([data.model_dump()])
